@@ -1,0 +1,144 @@
+/* General Container */
+.profile-container {
+  background: linear-gradient(to bottom, #ffffff, #ffe5e5);
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  background: #ffcccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #c0070b;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.username-section h2 {
+  font-size: 24px;
+  color: #c0070b;
+  margin: 0;
+}
+
+.edit-button {
+  background: #c0070b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+  background: #e60000;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-username-edit {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ffcccc;
+  border-radius: 5px;
+}
+
+.save-button {
+  background: #c0070b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.save-button:hover {
+  background: #e60000;
+}
+
+/* Profile Stats */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.profile-stat {
+  text-align: center;
+  background: #ffe6e6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-stat:hover {
+  background: #ffcccc;
+}
+
+.profile-stat span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c0070b;
+}
+
+/* Posts Section */
+.posts-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.posts-title {
+  font-size: 20px;
+  color: #c0070b;
+  margin-bottom: 15px;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post-card {
+  background: #ffe6e6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-card p {
+  margin: 0 0 10px 0;
+  color: #333333;
+}
+
+.post-card small {
+  font-size: 12px;
+  color: #555555;
+}

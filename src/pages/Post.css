@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.post-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #c0070b; /* Red theme for sidebar */
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #c0070b; /* Slightly darker red on hover */
+}
+
+.menu-item.active {
+  background-color: #ffffff;
+  color: #c0070b; /* Active menu item with red text */
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Post Form */
+.post-form-container {
+  background-color: #fff5f5; /* Light red background for the form */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #c0070b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-heading {
+  margin: 0 0 15px;
+  color: #c0070b;
+  font-size: 24px;
+}
+
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tweet-textbox {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c0070b;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+.tweet-textbox:focus {
+  outline: none;
+  border-color: #c0070b;
+  box-shadow: 0 0 4px rgba(230, 57, 70, 0.6);
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.char-count {
+  font-size: 14px;
+  color: #c0070b;
+}
+
+.tweet-btn {
+  background-color: #c0070b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tweet-btn:hover {
+  background-color: #c0070b;
+}
+
+/* Tweet Feed */
+.tweet-feed {
+  margin-top: 20px;
+}
+
+.tweets-heading {
+  color: #c0070b;
+  margin-bottom: 10px;
+}
+
+.tweet-card {
+  background-color: #fff5f5; /* Light red background for tweets */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #c0070b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.tweet-meta {
+  font-size: 12px;
+  color: #c0070b;
+}
+
+.no-tweets {
+  background-color: #fff0f0; /* Pale red for empty state */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #c0070b;
+  border: 1px dashed #ff4d4f;
+}

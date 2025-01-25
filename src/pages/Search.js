@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import "./Search.css"; // Importing the CSS file
+import "./Search.css";
 
 const SearchComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showCategories, setShowCategories] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const categories = ["Accounts", "Posts", "Tags"];
 
@@ -13,8 +16,39 @@ const SearchComponent = () => {
     }
   };
 
-  const handleCategoryClick = (category) => {
-    console.log(`Searching for ${searchQuery} in ${category}`);
+  const handleCategoryClick = async (category) => {
+    setLoading(true);
+    setError(null);
+
+    let endpoint = "";
+    switch (category) {
+      case "Accounts":
+        endpoint = `http://localhost:8080/search/user?query=${searchQuery}`;
+        break;
+      case "Posts":
+        endpoint = `http://localhost:8080/search/post?query=${searchQuery}`;
+        break;
+      case "Tags":
+        endpoint = `http://localhost:8080/search/tag?query=${searchQuery}`;
+        break;
+      default:
+        setError("Invalid category selected");
+        setLoading(false);
+        return;
+    }
+
+    try {
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        throw new Error("Failed to fetch search results");
+      }
+      const data = await response.json();
+      setSearchResults(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,6 +81,20 @@ const SearchComponent = () => {
                 </button>
               ))}
             </div>
+          </div>
+        )}
+        {loading && <p className="loading-text">Loading...</p>}
+        {error && <p className="error-text">{error}</p>}
+        {searchResults.length > 0 && (
+          <div className="results">
+            <h3 className="results-title">Search Results:</h3>
+            <ul className="results-list">
+              {searchResults.map((result, index) => (
+                <li key={index} className="result-item">
+                  {JSON.stringify(result)}
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

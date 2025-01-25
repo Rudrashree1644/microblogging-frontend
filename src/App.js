@@ -26,7 +26,12 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <div className="app">
         {isLoggedIn && <Sidebar />} {/* Show Sidebar only when logged in */}
         <div className="main-content">

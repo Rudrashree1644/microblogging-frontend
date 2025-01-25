@@ -197,3 +197,38 @@ body {
     font-size: 16px;
   }
 }
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.like-btn, .share-btn {
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.like-btn:hover, .share-btn:hover {
+  background-color: #d62839;
+  transform: scale(1.05);
+}
+
+.liked {
+  background-color: #e63946; /* Keeps the red color when liked */
+}
+
+.share-btn {
+  background-color: #457b9d;
+}
+
+.share-btn:hover {
+  background-color: #2a6f8f;
+}

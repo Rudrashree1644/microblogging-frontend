@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Search.css";
 
-const SearchComponent = () => {
+const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showCategories, setShowCategories] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
@@ -102,4 +102,4 @@ const SearchComponent = () => {
   );
 };
 
-export default SearchComponent;
+export default Search;

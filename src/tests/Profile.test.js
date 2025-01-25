@@ -29,3 +29,32 @@ test("updates username and displays it after saving", () => {
   expect(screen.getByText("NewUsername")).toBeInTheDocument();
   expect(screen.queryByRole("textbox")).not.toBeInTheDocument();
 });
+
+test("should display modal with 'Followers' title when Followers button is clicked", async () => {
+    // Render the Profile component
+    render(<Profile />);
+  
+    // Simulate clicking the Followers button
+    fireEvent.click(screen.getByText(/followers/i));
+  
+    // Use `waitFor` to wait for the modal to appear
+    const modal = await screen.findByRole('dialog', { hidden: false });
+  
+    // Check if the modal contains the "Followers" title
+    expect(modal).toHaveTextContent(/followers/i);
+  });
+  
+  test("should display modal with 'Following' title when Following button is clicked", async () => {
+    // Render the Profile component
+    render(<Profile />);
+  
+    // Simulate clicking the Followers button
+    fireEvent.click(screen.getByText(/following/i));
+  
+    // Use `waitFor` to wait for the modal to appear
+    const modal = await screen.findByRole('dialog', { hidden: false });
+  
+    // Check if the modal contains the "Followers" title
+    expect(modal).toHaveTextContent(/following/i);
+  });
+  

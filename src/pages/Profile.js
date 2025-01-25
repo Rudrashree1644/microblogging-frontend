@@ -51,6 +51,7 @@ const Profile = () => {
                 value={username}
                 onChange={handleUsernameChange}
                 className="profile-username-edit"
+                aria-label="Edit Username"
               />
               <button type="submit" className="save-button">Save</button>
             </form>
@@ -92,14 +93,21 @@ const Profile = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="modal-overlay">
+        <div
+          className="modal-overlay"
+          role="dialog"
+          aria-labelledby="modal-title"
+          aria-hidden={!showModal}
+        >
           <div className="modal-content">
-            <h2>{modalTitle}</h2>
+            <h2 id="modal-title">{modalTitle}</h2>
             <ul>
               {/* Empty list for now */}
               <p>No users to display yet.</p>
             </ul>
-            <button onClick={handleCloseModal} className="close-button">Close</button>
+            <button onClick={handleCloseModal} className="close-button" aria-label="Close Modal">
+              Close
+            </button>
           </div>
         </div>
       )}

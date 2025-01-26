@@ -43,17 +43,10 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Sidebar */}
-      <div className="sidebar">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/search">Search</a></li>
-          <li><a href="/post">Post</a></li>
-        </ul>
-      </div>
+     
 
       {/* Main Content */}
-      <div className="main-content">
+      <div className="main-content" >
         {/* Post Section */}
         <div className="post-section">
           <h2 className="post-title">What's happening?</h2>

@@ -1,28 +1,104 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #fafafa;
-  }
-  
-  .login-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  .login-container input {
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.login-box {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.google-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #d32f2f; /* Dark red background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
+.username-container {
+  margin-top: 20px;
+}
+
+.username-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #d32f2f; /* Dark red background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+
+input:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.8);
+}
+
+/* For a more modern input box and button */
+.username-input::placeholder,
+.submit-btn::placeholder {
+  color: #aaa;
+}
+/* Add this in your Login.css */
+.loading {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d32f2f; /* Dark red color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

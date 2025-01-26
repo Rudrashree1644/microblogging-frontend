@@ -1,83 +1,82 @@
 /* Sidebar styles */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px; /* Adjusted width for better spacing */
-    height: 100vh; /* Full height of the viewport */
-    background-color: #1e1e2f; /* Sleek dark background */
-    color: #ffffff; /* Text color for contrast */
-    padding-top: 20px;
-    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
-    z-index: 1000; /* Ensures it's above other content */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Sidebar header (optional) */
-  .sidebar .sidebar-header {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px 0;
-    color: #ffffff;
-    border-bottom: 1px solid #3c3c5c;
-    margin-bottom: 20px;
-  }
-  
-  /* Sidebar list styles */
-  .sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px; /* Space between items */
-  }
-  
-  .sidebar li a {
-    color: #ffffff; /* White text */
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
-  }
-  
-  /* Hover effects for links */
-  .sidebar li a:hover {
-    background-color: #4c4c6a; /* Subtle hover background */
-    transform: translateX(5px); /* Slight movement on hover */
-  }
-  
-  /* Active link styling */
-  .sidebar li a.active {
-    background-color: #4c6ef5; /* Highlight active link */
-    color: #ffffff; /* Text color for active link */
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(76, 110, 245, 0.5); /* Subtle glow for the active link */
-  }
-  
-  /* Sidebar footer (optional) */
-  .sidebar .sidebar-footer {
-    margin-top: auto; /* Pushes footer to the bottom */
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #3c3c5c;
-    color: #b3b3b3; /* Muted footer text */
-    font-size: 14px;
-  }
-  
-  .sidebar .sidebar-footer a {
-    color: #4c6ef5;
-    text-decoration: none;
-  }
-  
-  .sidebar .sidebar-footer a:hover {
-    text-decoration: underline;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px; /* Adjusted width for better spacing */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #1e1e2f; /* Sleek dark background */
+  color: #ffffff; /* Text color for contrast */
+  padding-top: 20px;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  z-index: 1000; /* Ensures it's above other content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar header (optional) */
+.sidebar .sidebar-header {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  border-bottom: 1px solid #3c3c5c;
+  margin-bottom: 20px;
+}
+
+/* Sidebar list styles */
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* Space between items */
+}
+
+.sidebar li a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effects for links */
+.sidebar li a:hover {
+  background-color: #4c4c6a; /* Subtle hover background */
+  transform: translateX(5px); /* Slight movement on hover */
+}
+
+/* Active link styling */
+.sidebar li a.active {
+  background-color: #4c6ef5; /* Highlight active link */
+  color: #ffffff; /* Text color for active link */
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(76, 110, 245, 0.5); /* Subtle glow for the active link */
+}
+
+/* Sidebar footer (optional) */
+.sidebar .sidebar-footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #3c3c5c;
+  color: #b3b3b3; /* Muted footer text */
+  font-size: 14px;
+}
+
+.sidebar .sidebar-footer a {
+  color: #4c6ef5;
+  text-decoration: none;
+}
+
+.sidebar .sidebar-footer a:hover {
+  text-decoration: underline;
+}

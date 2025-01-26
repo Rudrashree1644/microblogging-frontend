@@ -4,14 +4,14 @@ import "./Profile.css"; // Importing the CSS file
 const Profile = () => {
   const [username, setUsername] = useState("User1");
   const [editMode, setEditMode] = useState(false);
-  const [followers, setFollowers] = useState(120);
-  const [following, setFollowing] = useState(180);
+  const [followers, setFollowers] = useState(0);
+  const [following, setFollowing] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
 
   const [userPosts, setUserPosts] = useState([
-    { content: "Loving the new profile!", user: "User1", time: new Date().toLocaleString() },
-    { content: "Had a great day today!", user: "User1", time: new Date().toLocaleString() },
+    { content: "Loving the new profile!", user: "User1" },
+    { content: "Had a great day today!", user: "User1" },
   ]);
 
   const handleUsernameChange = (e) => {
@@ -84,7 +84,7 @@ const Profile = () => {
             <div key={index} className="post-card">
               <p>{post.content}</p>
               <small>
-                Posted by {post.user} on {post.time}
+                Posted by {post.user}
               </small>
             </div>
           ))}

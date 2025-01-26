@@ -25,14 +25,7 @@ const Post = () => {
   return (
     <div className="post-container">
       {/* Sidebar */}
-      <div className="sidebar">
-        <ul className="sidebar-menu">
-          <li><a href="/" className="menu-item"> Home</a></li>
-          <li><a href="/profile" className="menu-item"> Profile</a></li>
-          <li><a href="/search" className="menu-item"> Search</a></li>
-          <li><a href="/post" className="menu-item active"> Post</a></li>
-        </ul>
-      </div>
+     
 
       {/* Main Content */}
       <div className="main-content">

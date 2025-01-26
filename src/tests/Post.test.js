@@ -3,23 +3,7 @@ import { render, fireEvent, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Post from "../pages/Post"; // Adjust the path if necessary
 
-describe("Post Component", () => {
-  test("renders the Post component correctly", () => {
-    render(<Post />);
-
-    // Check for elements in the sidebar
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Profile")).toBeInTheDocument();
-    expect(screen.getByText("Search")).toBeInTheDocument();
-
-    // Use getByRole for more specificity for the "Post" link
-    expect(screen.getByRole("link", { name: "Post" })).toBeInTheDocument();
-
-    // Check for the main content
-    expect(screen.getByText("What's happening?")).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("Share your thoughts...")).toBeInTheDocument();
-  });
-});test("allows user to type and submit a tweet", async () => {
+test("allows user to type and submit a tweet", async () => {
     render(<Post />);
   
     const tweetInput = screen.getByPlaceholderText("Share your thoughts...");
